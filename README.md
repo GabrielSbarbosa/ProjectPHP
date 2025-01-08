@@ -1,53 +1,50 @@
-Controle de Funcionários
+# Controle de Funcionários
 
 Este é um sistema simples para o controle de funcionários, desenvolvido com PHP, MySQL e JavaScript. O projeto foi criado com o objetivo de gerenciar empresas e seus funcionários de forma intuitiva, atendendo a requisitos básicos de autenticação e cadastro.
 
-🚀 Funcionalidades
+---
 
-Login e Autenticação
+## 🚀 Funcionalidades
 
-Validação de email e senha.
+- **Login e Autenticação**
+  - Validação de email e senha.
+  - Exibição de mensagens de sucesso ou erro no login.
 
-Exibição de mensagens de sucesso ou erro no login.
+- **Gerenciamento de Funcionários**
+  - Cadastro de funcionários com nome, CPF, RG, email e associação a uma empresa.
+  - Listagem de todos os funcionários cadastrados na tela inicial.
 
-Gerenciamento de Funcionários
+- **Gerenciamento de Empresas**
+  - Cadastro de novas empresas com nome.
+  - Associação de funcionários a empresas existentes.
 
-Cadastro de funcionários com nome, CPF, RG, email e associação a uma empresa.
+---
 
-Listagem de todos os funcionários cadastrados na tela inicial.
+## 🔧 Tecnologias Utilizadas
 
-Gerenciamento de Empresas
+- **Backend:** PHP (sem frameworks)
+- **Banco de Dados:** MySQL
+- **Frontend:** HTML5, CSS3 e JavaScript
 
-Cadastro de novas empresas com nome.
+---
 
-Associação de funcionários a empresas existentes.
+## 📉 Requisitos
 
-🔧 Tecnologias Utilizadas
+- Servidor com suporte a PHP 7.4 ou superior.
+- Banco de Dados MySQL configurado.
+- Navegador moderno para acessar o sistema.
 
-Backend: PHP (sem frameworks)
+---
 
-Banco de Dados: MySQL
+## 📋 Instalação e Configuração
 
-Frontend: HTML5, CSS3 e JavaScript
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seuusuario/nome-do-repositorio.git
 
-📉 Requisitos
-
-Servidor com suporte a PHP 7.4 ou superior.
-
-Banco de Dados MySQL configurado.
-
-Navegador moderno para acessar o sistema.
-
-🗃️ Instalação e Configuração
-
-Clone este repositório:
-
-git clone https://github.com/seuusuario/nome-do-repositorio.git
-
-Configure o banco de dados:
+2. Configure o banco de dados:
 
 Crie o banco de dados controle_funcionarios.
-
 Execute o script SQL de criação de tabelas:
 
 CREATE TABLE tbl_usuario (
@@ -73,7 +70,7 @@ CREATE TABLE tbl_funcionario (
 
 INSERT INTO tbl_usuario (login, senha) VALUES ('teste@gmail.com.br', '1234');
 
-Configure o arquivo config.php com as credenciais do seu banco de dados:
+3. Configure o arquivo config.php com as credenciais do seu banco de dados:
 
 <?php
 $host = 'localhost';
@@ -86,24 +83,8 @@ if ($conn->connect_error) {
 }
 ?>
 
-Acesse o sistema via navegador:
+4. Acesse o sistema via navegador:
+ .  URL: http://localhost/controle_funcionarios
 
-URL: http://localhost/controle_funcionarios
-
-💡 Melhorias Futuras
-
-Implementação de edição e exclusão de registros.
-
-Validação de CPF no backend.
-
-Adição de busca e paginação para listas de funcionários.
-
-Melhorias no design utilizando frameworks CSS (e.g., Bootstrap).
-
-Logs de auditoria para rastrear ações de usuários.
-
-🤖 Contribuições
-
-Sinta-se à vontade para abrir issues ou enviar pull requests com sugestões e melhorias. Sua colaboração é bem-vinda!
 
 
