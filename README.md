@@ -38,11 +38,11 @@ Este é um sistema simples para o controle de funcionários, desenvolvido com PH
 
 ## 📋 Instalação e Configuração
 
-1. Clone este repositório:
-   ```bash
+**1. Clone este repositório:**
+   ``bash
    git clone https://github.com/seuusuario/nome-do-repositorio.git
 
-2. Configure o banco de dados:
+**2. Configure o banco de dados:**
 
 Crie o banco de dados controle_funcionarios.
 Execute o script SQL de criação de tabelas:
@@ -70,7 +70,7 @@ CREATE TABLE tbl_funcionario (
 
 INSERT INTO tbl_usuario (login, senha) VALUES ('teste@gmail.com.br', '1234');
 
-3. Configure o arquivo config.php com as credenciais do seu banco de dados:
+**3. Configure o arquivo config.php com as credenciais do seu banco de dados:**
 
 <?php
 $host = 'localhost';
@@ -83,7 +83,7 @@ if ($conn->connect_error) {
 }
 ?>
 
-4. Acesse o sistema via navegador:
+**4. Acesse o sistema via navegador:**
  .  URL: http://localhost/controle_funcionarios
 
 
