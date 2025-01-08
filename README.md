@@ -1,90 +1,121 @@
-# Controle de Funcionários
+Claro! Aqui está um exemplo de README em formato Markdown para o seu projeto de controle de funcionários em PHP:
 
-Este é um sistema simples para o controle de funcionários, desenvolvido com PHP, MySQL e JavaScript. O projeto foi criado com o objetivo de gerenciar empresas e seus funcionários de forma intuitiva, atendendo a requisitos básicos de autenticação e cadastro.
+```markdown
+# Projeto de Controle de Funcionários
 
----
+Este projeto é um sistema simples de controle de funcionários desenvolvido em PHP, MySQL e JavaScript. O objetivo é gerenciar empresas e seus funcionários, com funcionalidades de login, cadastro e listagem.
 
-## 🚀 Funcionalidades
+## Pré-requisitos
 
-- **Login e Autenticação**
-  - Validação de email e senha.
-  - Exibição de mensagens de sucesso ou erro no login.
+- PHP
+- MySQL
+- Conhecimentos básicos em JavaScript
 
-- **Gerenciamento de Funcionários**
-  - Cadastro de funcionários com nome, CPF, RG, email e associação a uma empresa.
-  - Listagem de todos os funcionários cadastrados na tela inicial.
+## Estrutura do Banco de Dados
 
-- **Gerenciamento de Empresas**
-  - Cadastro de novas empresas com nome.
-  - Associação de funcionários a empresas existentes.
+O banco de dados possui as seguintes tabelas:
 
----
+### Tabela `tbl_usuario`
 
-## 🔧 Tecnologias Utilizadas
+| Campo     | Tipo         | Descrição              |
+|-----------|--------------|------------------------|
+| id_usuario| INT          | Chave primária         |
+| login     | VARCHAR(20)  | Login do usuário       |
+| senha     | VARCHAR(20)  | Senha do usuário       |
 
-- **Backend:** PHP (sem frameworks)
-- **Banco de Dados:** MySQL
-- **Frontend:** HTML5, CSS3 e JavaScript
+### Tabela `tbl_empresa`
 
----
+| Campo     | Tipo         | Descrição              |
+|-----------|--------------|------------------------|
+| id_empresa| INT          | Chave primária         |
+| nome      | VARCHAR(40)  | Nome da empresa        |
 
-## 📉 Requisitos
+### Tabela `tbl_funcionario`
 
-- Servidor com suporte a PHP 7.4 ou superior.
-- Banco de Dados MySQL configurado.
-- Navegador moderno para acessar o sistema.
+| Campo        | Tipo         | Descrição              |
+|--------------|--------------|------------------------|
+| id_funcionario| INT         | Chave primária         |
+| nome         | VARCHAR(50)  | Nome do funcionário    |
+| cpf          | VARCHAR(11)  | CPF do funcionário     |
+| rg           | VARCHAR(20)  | RG do funcionário      |
+| email        | VARCHAR(30)  | Email do funcionário   |
+| id_empresa   | INT          | Chave estrangeira (empresa) |
 
----
+## Configuração do Banco de Dados
 
-## 📋 Instalação e Configuração
+Execute o seguinte script SQL para criar as tabelas e inserir o usuário de teste:
 
-**1. Clone este repositório:**
-   ``bash
-   git clone https://github.com/seuusuario/nome-do-repositorio.git
+```sql
+CREATE DATABASE controle_funcionarios;
 
-**2. Configure o banco de dados:**
-
-Crie o banco de dados controle_funcionarios.
-Execute o script SQL de criação de tabelas:
+USE controle_funcionarios;
 
 CREATE TABLE tbl_usuario (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
-    login VARCHAR(20),
-    senha VARCHAR(20)
+    login VARCHAR(20) NOT NULL,
+    senha VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE tbl_empresa (
     id_empresa INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(40)
+    nome VARCHAR(40) NOT NULL
 );
 
 CREATE TABLE tbl_funcionario (
     id_funcionario INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(50),
-    cpf VARCHAR(11),
-    rg VARCHAR(20),
-    email VARCHAR(30),
+    nome VARCHAR(50) NOT NULL,
+    cpf VARCHAR(11) NOT NULL,
+    rg VARCHAR(20) NOT NULL,
+    email VARCHAR(30) NOT NULL,
     id_empresa INT,
     FOREIGN KEY (id_empresa) REFERENCES tbl_empresa(id_empresa)
 );
 
 INSERT INTO tbl_usuario (login, senha) VALUES ('teste@gmail.com.br', '1234');
+```
 
-**3. Configure o arquivo config.php com as credenciais do seu banco de dados:**
+## Funcionalidades
 
-<?php
-$host = 'localhost';
-$user = 'seu_usuario';
-$password = 'sua_senha';
-$dbname = 'controle_funcionarios';
-$conn = new mysqli($host, $user, $password, $dbname);
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
-}
-?>
+### Página de Login
 
-**4. Acesse o sistema via navegador:**
- .  URL: http://localhost/controle_funcionarios
+- Validação de email e senha.
+- Mensagem de sucesso ou falha no login.
 
+### Página Inicial
 
+- Listagem de todos os funcionários cadastrados.
+- Menu para cadastrar nova empresa e novo funcionário.
 
+### Cadastro de Empresa
+
+- Formulário para cadastrar nova empresa.
+- Validação do campo nome.
+
+### Cadastro de Funcionário
+
+- Formulário para cadastrar novo funcionário.
+- Campos: nome, cpf, rg, email e empresa.
+- Validação dos campos obrigatórios.
+
+## Como Executar
+
+1. Clone este repositório.
+2. Configure o banco de dados MySQL e execute o script SQL fornecido.
+3. Coloque os arquivos PHP no servidor web.
+4. Acesse a página de login e utilize o usuário de teste (`teste@gmail.com.br` / `1234`).
+
+## Contribuição
+
+Sinta-se à vontade para contribuir com melhorias e novas funcionalidades. Para isso, faça um fork deste repositório, crie uma branch com suas alterações e envie um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a MIT License.
+
+---
+
+Qualquer dúvida ou sugestão, entre em contato!
+
+```
+
+Você pode ajustar o conteúdo conforme necessário para refletir melhor os detalhes do seu projeto. Se precisar de mais alguma coisa, estou aqui para ajudar! 😊
