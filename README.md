@@ -1,4 +1,3 @@
-Claro! Aqui está um exemplo de README em formato Markdown para o seu projeto de controle de funcionários em PHP:
 
 ```markdown
 # Projeto de Controle de Funcionários
@@ -104,18 +103,3 @@ INSERT INTO tbl_usuario (login, senha) VALUES ('teste@gmail.com.br', '1234');
 3. Coloque os arquivos PHP no servidor web.
 4. Acesse a página de login e utilize o usuário de teste (`teste@gmail.com.br` / `1234`).
 
-## Contribuição
-
-Sinta-se à vontade para contribuir com melhorias e novas funcionalidades. Para isso, faça um fork deste repositório, crie uma branch com suas alterações e envie um pull request.
-
-## Licença
-
-Este projeto está licenciado sob a MIT License.
-
----
-
-Qualquer dúvida ou sugestão, entre em contato!
-
-```
-
-Você pode ajustar o conteúdo conforme necessário para refletir melhor os detalhes do seu projeto. Se precisar de mais alguma coisa, estou aqui para ajudar! 😊
