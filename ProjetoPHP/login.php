@@ -16,7 +16,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $login = $_POST['login'];
-    $senha = $_POST['senha'];
+    $senha = md5($_POST['senha']);
 
     $conn = new mysqli('localhost', 'root', '', 'controle_funcionarios');
 
